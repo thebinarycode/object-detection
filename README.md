@@ -11,5 +11,5 @@ https://github.com/heartexlabs/labelImg
 Steps to execute:
 1. Set the path to current directory in command prompt
 2. Command to run the complete process: docker compose up
-3. Command to build the image from DockerFile: docker build <preferred container name> .
-4. Command to run the container image in interactive type: docker run -it <assigned container name> bash
+3. Command to build the image from DockerFile: docker build [preferred container name] .
+4. Command to run the container image in interactive type: docker run -it [assigned container name] bash
