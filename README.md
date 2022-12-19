@@ -8,6 +8,10 @@ You can use LabelImg for tagging the objects in the image
 Refer the link below for installation and dataset preparation
 https://github.com/heartexlabs/labelImg
 
+To train in a model directly, TrainModel.py file can be used
+
+To train inside a Docker container, follow as below
+
 Steps to execute:
 1. Set the path to current directory in command prompt
 2. Command to run the complete process: docker compose up
