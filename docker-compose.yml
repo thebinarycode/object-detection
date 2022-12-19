@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  object_detection:
+    image: ubuntu/20.04
+    container_name: tf-ubu
+    build: .
+    volumes:
+      - object_detection:/app/object_detection/saved_model/
+
+volumes:
+  object_detection:
