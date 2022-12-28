@@ -4,3 +4,4 @@ tflite_model_maker==0.4.2
 tflite_support==0.4.2 
 pycocotools
 lxml
+opencv-python

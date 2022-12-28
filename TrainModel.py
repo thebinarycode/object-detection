@@ -50,8 +50,13 @@ def train(model_name, batch_size, epochs, save_dir):
 
     spec = model_spec.get(model_name)
 
-    model = object_detector.create(train_data, model_spec=spec, batch_size=batch_size, train_whole_model=True, epochs=epochs, validation_data=val_data)
-    model.evaluate(val_data)
+    with open(save_dir + '/logs/training-log.txt', 'w') as f:
+        with redirect_stdout(f):
+            model = object_detector.create(train_data, model_spec=spec, batch_size=batch_size, train_whole_model=True, epochs=epochs, validation_data=val_data)
+    
+    with open(save_dir + '/logs/evaluate-log.txt', 'w') as f:
+        with redirect_stdout(f):
+            model.evaluate(val_data)
 
     with open(save_dir + '/modelsummary.txt', 'w') as f:
         with redirect_stdout(f):

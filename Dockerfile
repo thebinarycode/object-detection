@@ -55,10 +55,7 @@ RUN pip install -r requirements.txt
 
 RUN python3 -V
 
-RUN tensorboard --logdir /app/object_detection/saved-model/
+RUN git clone https://github.com/tensorflow/tensorflow.git
 
 CMD ["python3", "TrainModel.py", "efficientdet_lite0", "1", "1", "saved-model"]
-
-# apt-get install -y --no-install-recommends build-essential xdg-utils apt-utils cpio curl vim git lsb-release pciutils python3.8 python3-pip libgflags-dev libboost-dev libboost-log-dev cmake libx11-dev libssl-dev locales libjpeg8-dev libopenblas-dev gnupg2 protobuf-compiler python3-dev wget libgl1-mesa-glx libglib2.0-0 sudo
-
-# docker build tf-ubuntu . docker run -it bash
+CMD ["python3" "-m" "tensorflow.lite.tools.visualize" "./saved-model/android.tflite" "./saved-model/visualized_model.html"]
