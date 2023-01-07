@@ -15,5 +15,5 @@ To train inside a Docker container, follow as below
 Steps to execute:
 1. Set the path to current directory in command prompt
 2. Command to run the complete process: docker compose up
-3. Command to build the image from DockerFile: docker build [preferred container name] .
+3. Command to build the image from DockerFile: docker build -t [preferred container name] .
 4. Command to run the container image in interactive type: docker run -it [assigned container name] bash
